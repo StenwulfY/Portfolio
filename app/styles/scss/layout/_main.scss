@@ -1,20 +1,16 @@
 @lost flexbox flex;
-
 * {
-    // lost-utility: edit;
+    lost-utility: edit;
 }
-
 section {
-  lost-center: 980px;
+    lost-center: 980px;
+    height: 100%;
+    div {
+        lost-row: 1/4;
+    }
 }
-
-div {
-  lost-waffle: 1/3;
-
-}
-
 .hero-image {
-    background: url(../images/mountain.jpg);
+    background: url("../images/mountain.jpg");
     position: relative;
     height: 50vh;
     width: 100%;
@@ -23,30 +19,23 @@ div {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-  }
-
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  .parallax__layer--back {
-
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
-  }
+.content_about {
+    background: #42CAFD;
+    div {
+        lost-column: 1/3;
+        background: darken(tomato, 10%);
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        @media (max-width: 700px) {
+            lost-column: 1/1;
+        }
+    }
+    &-education {}
+    &-bymalmros {}
+    &-work {}
+}
+.content_portfolio {
+    div {}
+}
