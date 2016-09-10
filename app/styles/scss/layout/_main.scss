@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: url("../images/mountain.jpg");
+    background: url("../images/train.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -27,23 +27,44 @@
     position: absolute;
     z-index: 1000;
     top: 40vw;
-    background: #fff;
+    background: $white1;
     height: 100vh;
     width: 100%;
     .content {
-        lost-center: 980px;
+        lost-center: 1200px;
         .content_about {
             padding: 0;
             margin: 0;
             display: flex;
+            @media only screen and (max-width:632px) {
+
+            }
             -webkit-flex-flow: row wrap;
             justify-content: space-around;
             div {
-                background: tomato;
                 padding: 5px;
-                width: 300px;
+            }
+
+            .content_about-picture {
+                background: url("../images/profile.jpg");
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
                 height: 350px;
+                width: 300px;
                 margin-top: -150px;
+            }
+            .content_about-education {
+                height: 350px;
+                background: $white2;
+                margin-top: -150px;
+                width: 300px
+            }
+            .content_about-cv {
+                height: 350px;
+                background: $white2;
+                margin-top: -150px;
+                width: 300px
             }
         }
         .content_portfolio {
@@ -55,7 +76,7 @@
             div {
                 background: tomato;
                 padding: 5px;
-                width: 300px;
+                width: 400px;
                 height: 350px;
                 margin-top: 10px;
             }

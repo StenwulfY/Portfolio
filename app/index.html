@@ -8,52 +8,38 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-
-    <!-- Navigation -->
-    <header class="header">
-        <div>
-            <a href="#"><img src="" alt=""></a>
-        </div>
-
-        <nav class="header-nav">
-            <ul>
-                <li><a href="#">Start</a></li>
-                <li><a href="#">Om mig</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Kompetancer</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Daniel Malmros</h1>
-    </section>
-
-    <section class="wrapper">
-        <div class="content">
-            <div class="content_about">
-                <div></div>
-                <div></div>
-                <div></div>
+    <div id="app">
+        <!-- Navigation -->
+        <header class="header">
+            <div>
+                <a href="#"><img src="" alt=""></a>
             </div>
-            <div class="content_portfolio">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </section>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a v-link="{ path: '/foo' }">Start</a></li>
+                    <li><a v-link="{ path: '/bar' }">Om mig</a></li>
+                    <li><a v-link="{ path: '/foo' }">Portfolio</a></li>
+                    <li><a v-link="{ path: '/foo' }">Kompetancer</a></li>
+                    <li><a v-link="{ path: '/foo' }">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Daniel Malmros</h1>
+        </section>
+
+        <section class="wrapper">
+            <router-view></router-view>
+        </section>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

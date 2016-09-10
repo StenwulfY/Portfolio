@@ -9,7 +9,7 @@ You'll need to have Gulp installed. If you already have Gulp installed, you can 
 * Run `npm-install.cmd` to install dev dependencies. Use sudo if needed.
 
 During development mode, run the default task so you'll have watchers and browser sync.
-* Run `gulp` to set fire on this beast!
+* Run `start-beast.cmd` to set fire on this beast!
 
 When project is ready to deploy, simply do the following:
 * Run `gulp deploy`
