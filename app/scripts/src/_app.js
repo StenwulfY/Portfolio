@@ -15,7 +15,7 @@ router.map({
     },
     '/bar': {
         component: {
-            template: '',
+            path: '',
             data: function() {
                 return {
                     text: "Hello World!"

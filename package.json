@@ -24,6 +24,7 @@
     "gulp-webserver": "^0.9.1",
     "lost": "^7.0.3",
     "vue": "^1.0.26",
-    "vue-router": "^0.7.13"
+    "vue-router": "^0.7.13",
+    "vueify": "^8.7.0"
   }
 }
