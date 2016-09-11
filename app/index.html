@@ -23,11 +23,11 @@
 
             <nav class="header-nav">
                 <ul>
-                    <li><a v-link="{ path: '/foo' }">Start</a></li>
-                    <li><a v-link="{ path: '/bar' }">Om mig</a></li>
-                    <li><a v-link="{ path: '/foo' }">Portfolio</a></li>
-                    <li><a v-link="{ path: '/foo' }">Kompetancer</a></li>
-                    <li><a v-link="{ path: '/foo' }">Kontakt</a></li>
+                    <li><a v-link="{ path: '/' }">Start</a></li>
+                    <li><a v-link="{ path: '/about' }">Om mig</a></li>
+                    <li><a v-link="{ path: '/portfolio' }">Portfolio</a></li>
+                    <li><a v-link="{ path: '/skills' }">Kompetancer</a></li>
+                    <li><a v-link="{ path: '/contact' }">Kontakt</a></li>
                 </ul>
             </nav>
         </header>
@@ -40,6 +40,28 @@
             <router-view></router-view>
         </section>
     </div>
+
+    <!-- Templates for portfolio -->
+
+    <template id="start">
+        <p>Jeg er start</p>
+    </template>
+
+    <template id="about_me">
+        <p>Jeg er om mig</p>
+    </template>
+
+    <template id="portfolio">
+        <p>Jeg er portfolio</p>
+    </template>
+
+    <template id="skills">
+        <p>Jeg er kompeancer</p>
+    </template>
+
+    <template id="contact">
+        <p>Jeg er kontakt</p>
+    </template>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

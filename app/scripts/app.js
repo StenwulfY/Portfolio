@@ -13593,22 +13593,66 @@ var router = new VueRouter()
 
 //add your routes and their components
 router.map({
-    '/foo': {
+    '/': {
         component: {
-            template: '<p>This is foo!</p>'
-        }
-    },
-    '/bar': {
-        component: {
-            path: '',
+            template: '#start',
+
             data: function() {
                 return {
-                    text: "Hello World!"
+
+                };
+            }
+        }
+    },
+
+    '/about': {
+        component: {
+            template: '#about_me',
+
+            data: function() {
+                return {
+
+                };
+            }
+        }
+    },
+
+    '/portfolio': {
+        component: {
+            template: '#portfolio',
+
+            data: function() {
+                return {
+
+                };
+            }
+        }
+    },
+
+    '/skills': {
+        component: {
+            template: '#skills',
+
+            data: function() {
+                return {
+
+                };
+            }
+        }
+    },
+
+    '/contact': {
+        component: {
+            template: '#contact',
+
+            data: function() {
+                return {
+
                 };
             }
         }
     }
-})
+});
 
 router.start(App, '#app');
 
