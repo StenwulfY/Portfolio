@@ -1,16 +1,17 @@
 .hero {
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: url("../images/train.jpg");
+    background: url("../images/tropper.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 35vw;
     width: 100%;
+
     h1 {
         position: relative;
         z-index: 1;
@@ -23,6 +24,7 @@
         /*-webkit-transition: 1s opacity ease-in-out;*/
     }
 }
+
 .wrapper {
     position: absolute;
     z-index: 1000;
@@ -30,56 +32,44 @@
     background: $white1;
     height: 100vh;
     width: 100%;
-    .content {
-        lost-center: 1200px;
-        .content_about {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            @media only screen and (max-width:632px) {
+}
 
-            }
-            -webkit-flex-flow: row wrap;
-            justify-content: space-around;
-            div {
-                padding: 5px;
-            }
+.card_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    z-index: 9999;
+    width: auto;
 
-            .content_about-picture {
-                background: url("../images/profile.jpg");
-                background-size: cover;
-                background-position: center center;
-                background-repeat: no-repeat;
-                height: 350px;
-                width: 300px;
-                margin-top: -150px;
-            }
-            .content_about-education {
-                height: 350px;
-                background: $white2;
-                margin-top: -150px;
-                width: 300px
-            }
-            .content_about-cv {
-                height: 350px;
-                background: $white2;
-                margin-top: -150px;
-                width: 300px
-            }
+    .card {
+        position: relative;
+        display: inline-block;
+        width: 300px;
+        height: 350px;
+        background: tomato;
+        cursor: pointer;
+
+        &:after {
+            content: "";
+            width: 300px;
+            height: 250px;
+            z-index: 999999;
+            position: absolute;
+            background: rgba($white2, 0.7);
+            transform: translate(10px,10px);
+            transition: all 0.7s ease;
         }
-        .content_portfolio {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            justify-content: space-around;
-            div {
-                background: tomato;
-                padding: 5px;
-                width: 400px;
-                height: 350px;
-                margin-top: 10px;
-            }
+
+        &:hover:after {
+            transform: translate(0,0);
         }
+    }
+
+    .bottom {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: $blue1;
     }
 }
