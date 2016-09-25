@@ -13583,6 +13583,7 @@ var template = Object.freeze({
   return Vue;
 
 }));
+
 Vue.use(VueRouter)
 
 // create App instance
@@ -13662,7 +13663,9 @@ $(window).scroll(function(e) {
 
 function parallax() {
     var scrolled = $(window).scrollTop();
-    $('.hero').css('top', -(scrolled * 0.0315) + 'rem');
-    $('.hero > h1').css('top', -(scrolled * -0.005) + 'rem');
-    $('.hero > h1').css('opacity', 1 - (scrolled * .00175));
+    $('.hero').css('top', -(scrolled * 0.0415) + 'rem');
+    $('.hero > p').css('top', -(scrolled * -0.005) + 'rem');
+    $('.hero > p').css('opacity', 1 - (scrolled * .00175));
+    $('.hero > h3').css('top', -(scrolled * -0.005) + 'rem');
+    $('.hero > h3').css('opacity', 1 - (scrolled * .00175));
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -22,49 +22,183 @@
             </div>
 
             <nav class="header-nav">
-                <ul>
+                <ul class="header-nav-list">
                     <li><a v-link="{ path: '/' }">Start</a></li>
-                    <li><a v-link="{ path: '/about' }">Om mig</a></li>
+                    <li><a v-link="{ path: '/about' }">Profil</a></li>
                     <li><a v-link="{ path: '/portfolio' }">Portfolio</a></li>
-                    <li><a v-link="{ path: '/skills' }">Kompetancer</a></li>
-                    <li><a v-link="{ path: '/contact' }">Kontakt</a></li>
+                    <li><a v-link="{ path: '/contact' }">Blog</a></li>
                 </ul>
             </nav>
         </header>
 
-        <section class="wrapper">
+
             <router-view></router-view>
-        </section>
+            <footer>
+                <ul>
+                    <li><p>© 2016. By Malmros</p></li>
+                    <li><p>Start</p></li>
+                    <li><p>Profil</p></li>
+                    <li><p>Portfolio</p></li>
+                    <li><p>Blog</p></li>
+                </ul>
+            </footer>
+
     </div>
 
     <!-- Templates for routing -->
 
     <template id="start">
+        <section class="wrapper">
         <section class="hero">
-            <h1>Daniel Malmros</h1>
+            <div class="hero_heading">
+                <div class="hero_heading-small"><p>Daniel Malmros</p>
+                  <br>
+                  <strong class="hero_heading-large">
+                      Frontend developer
+                  </strong>
+                </div>
+            </div>
+            <!-- <h1>Daniel Malmros</h1>
+            <h3>Frontend developer with a penchant for UX-development and graphic design!</h3> -->
         </section>
 
         <div class="card_wrapper">
             <div class="card card_one">
                 <div class="bottom">
-                    <p>GITHUB</p>
+                    <p>About me</p>
                 </div>
             </div>
             <div class="card card_two">
                 <div class="bottom">
-                    <p>GITHUB</p>
+                    <p>Portfolio</p>
                 </div>
             </div>
             <div class="card card_three">
                 <div class="bottom">
-                    <p>GITHUB</p>
+                    <p>Skills</p>
                 </div>
             </div>
         </div>
+
+        <div class="full_wrapper">
+            <div class="quote">
+                <div class="quote_content">
+                    <div class="quote_content-profile">
+
+                    </div>
+                    <div class="quote_content-text">
+                        <h1>
+                            "Med hang til webudvikling og grafisk design, tog jeg i 2015 hul på uddannelsen som multimediedesigner, med fokus på at tage en PBA i webudvikling."
+                        </h1>
+                    </div>
+                </div>
+                <div class="quote_images">
+                    <img src="/images/logo.svg" alt="" height="600" width="600">
+                </div>
+            </div>
+        </div>
+
+        <div class="images_wrapper">
+            <div class="gallery">
+              <div class="gallery--column">
+                <div class="gallery--item">
+                    <img src="//unsplash.it/325/325/?image=1043" />
+                    <figcaption>
+                        <h3>Baby bossen</h3>
+                        <p>Sitet er udviklet i wordpress og startede tilbage i 2014 som et hobby projekt, men er idag vokset sig til et større e-commerce site, og er sideløbende mit studie job.</p>
+                    </figcaption>
+                    <i class="ion-plus-round"></i><a href="#"></a>
+                </div>
+                <div class="gallery--item">
+                    <img src="//unsplash.it/325/325/?image=1042" />
+                    <figcaption>
+                        <h3>Arla Tøm Køleskabet</h3>
+                        <p>Sitet er udviklet i wordpress og startede tilbage i 2014 som et hobby projekt, men er idag vokset sig til et større e-commerce site, og er sideløbende mit studie job.</p>
+                    </figcaption>
+                    <i class="ion-plus-round"></i><a href="#"></a>
+                </div>
+              </div>
+              <div class="gallery--column">
+                <div class="gallery--item">
+                    <img src="//unsplash.it/325/467/?image=1041" />
+                    <figcaption>
+                        <h3>Waoo Købsflow</h3>
+                        <p>Sitet er udviklet i wordpress og startede tilbage i 2014 som et hobby projekt, men er idag vokset sig til et større e-commerce site, og er sideløbende mit studie job.</p>
+                    </figcaption>
+                    <i class="ion-plus-round"></i><a href="#"></a>
+                </div>
+                <div class="gallery--item">
+                    <img src="//unsplash.it/325/325/?image=1040" />
+                    <figcaption>
+                        <h3>Game Science Center</h3>
+                        <p>Sitet er udviklet i bootstrap, og var et større skole projekt. Igennem projektet havde vi konstant dialog med ejerne af centeret fra Berlin for at skabe det bedst mulige site.</p>
+                    </figcaption>
+                    <i class="ion-plus-round"></i><a href="#"></a>
+                </div>
+              </div>
+              <div class="gallery--column">
+                <div class="gallery--item">
+                    <img src="//unsplash.it/325/325/?image=1039" />
+                    <figcaption>
+                        <h3>Game Science Center</h3>
+                        <p>Sitet er udviklet i bootstrap, og var et større skole projekt. Igennem projektet havde vi konstant dialog med ejerne af centeret fra Berlin for at skabe det bedst mulige site.</p>
+                    </figcaption>
+                    <i class="ion-plus-round"></i><a href="#"></a>
+                </div>
+                <div class="gallery--item">
+                    <img src="//unsplash.it/325/325/?image=1038" />
+                    <figcaption>
+                        <h3>Game Science Center</h3>
+                        <p>Sitet er udviklet i bootstrap, og var et større skole projekt. Igennem projektet havde vi konstant dialog med ejerne af centeret fra Berlin for at skabe det bedst mulige site.</p>
+                    </figcaption>
+                    <i class="ion-plus-round"></i><a href="#"></a>
+                </div>
+              </div>
+            </div>
+         </div>
+
+     <div class="full_wrapper">
+         <router-link to="/skills" class="used_tech-bg">
+             <div class="used_tech-heading"><p>Technologies I use!</p>
+               <br>
+               <strong class="used_tech-images">
+                   <img src="/images/html5-color.svg" alt="" height="120" width="120">
+                   <img src="/images/css3-color.svg" alt="" height="120" width="120">
+                   <img src="/images/js.png" alt="" height="120" width="120">
+                    <img src="/images/vuejs.png" alt="" height="120" width="120">
+                    <img src="/images/angular-color.svg" alt="" height="120" width="120">
+               </strong>
+             </div>
+        </router-link>
+     </div>
+     </section>
     </template>
 
     <template id="about_me">
-        <p>Jeg er om mig</p>
+        <div class="content_wrapper">
+        <div class="about_me-card red">
+            <img src="/images/profile.jpg" alt="sample8" />
+            <div class="about_me-card--content">
+                <h2>
+                    Daniel <span>Malmros</span>
+                </h2>
+                <p>Let's create meaning and value!</p>
+                <div class="icons">
+                    <a href="https://dk.linkedin.com/in/danielmalmros" target="_blank"><i class="ion-social-linkedin-outline"></i></a>
+                    <a href="https://github.com/danielmalmros" target="_blank"><i class="ion-social-github"></i></a>
+                    <a href="https://www.instagram.com/by_malmros/" target="_blank"><i class="ion-social-instagram-outline"></i></a>
+                </div>
+            </div>
+            <div class="position">Frontend Developer</div>
+        </div>
+        <div class="about_me-text">
+            <p>
+                Frontend developer with an understanding of design and user experience that creates meaning and value for companies.<br>
+
+Currently working at Creuna Denmark A/S as frontend developer while studying multimedia design at Business Academy Aarhus to become a better frontend developer with a penchant for UX-development and graphic design.
+            </p>
+        </div>
+        </div>
     </template>
 
     <template id="portfolio">
